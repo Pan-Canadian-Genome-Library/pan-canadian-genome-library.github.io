@@ -89,3 +89,14 @@
   color: var(--ifm-color-emphasis-800);
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .cardGrid {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
