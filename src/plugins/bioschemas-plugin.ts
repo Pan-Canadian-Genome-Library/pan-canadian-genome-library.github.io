@@ -1,9 +1,9 @@
 module.exports = function(context, options) {
   return {
     name: 'bioschemas-plugin',
-    injectHtmlTags({content}) {
-      const {frontMatter} = content;
-      if (frontMatter.bioschemas) {
+    injectHtmlTags({ content }) {
+      // Check if content exists and has a frontMatter property
+      if (content && content.frontMatter && content.frontMatter.bioschemas) {
         return {
           headTags: [
             {
@@ -11,12 +11,12 @@ module.exports = function(context, options) {
               attributes: {
                 type: 'application/ld+json',
               },
-              innerHTML: JSON.stringify(frontMatter.bioschemas),
+              innerHTML: JSON.stringify(content.frontMatter.bioschemas),
             },
           ],
         };
       }
-      return {};
+      return {}; // Return an empty object if no Bioschemas data is found
     },
   };
 };
