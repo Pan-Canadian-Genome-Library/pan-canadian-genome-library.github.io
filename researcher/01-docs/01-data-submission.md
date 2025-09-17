@@ -1,10 +1,6 @@
 ---
 # Bioschemas front matter
-head:
-  - tag: script
-    attributes:
-        type: application/ld+json
-    content: |
+bioschemas:
         {
           "@context": "https://schema.org",
           "@type": "TrainingMaterial",
@@ -27,7 +23,7 @@ head:
           "url": "https://pan-canadian-genome-library.github.io/researcher/docs/data-submission",
           "datePublished": "2025-09-12T15:51:00+00:00",
           "dateModified": "2025-09-17T16:33:00+00:00",
-          "contributor": "{
+          "contributor": {
             "@type": "Person",
             "name": "Author Name"
             }
