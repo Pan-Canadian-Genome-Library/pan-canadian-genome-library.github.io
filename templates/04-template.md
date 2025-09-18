@@ -31,7 +31,7 @@ head:
           "url": "URL of the material",
           "datePublished": "2025-08-21T14:46:00+00:00",
           "dateModified": "2025-08-21T14:46:00+00:00",
-          "contributor": "{
+          "contributor": {
             "@type": "Person",
             "name": "Author Name"
             }

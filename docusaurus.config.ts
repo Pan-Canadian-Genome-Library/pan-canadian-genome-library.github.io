@@ -77,7 +77,6 @@ const config: Config = {
         sidebarPath: './publicSidebars.ts',
       },
     ],
-    './src/plugins/bioschemas-plugin.ts',
   ],
 
   themeConfig: {
