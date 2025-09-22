@@ -1,42 +1,34 @@
 ---
-# This is the front matter - all docs on our site need front matter for Bioschemas markup.
-# The mandatory fields you need to provide are: "@id", "name", "description" and "keywords"
-# You must include, but do not need to edit the fields: "@context", "@type", and "dct:conformsTo" 
-# Please also include: "author", "audience", "inLanguage", "license", "learningResourceType", "url", and "datePublished"
-# Optional fields are: "dateModified", "contributor", and any other relevant Bioschemas fields
-head:
-  - tag: script
-    attributes:
-        type: application/ld+json
-    content: |
-        {
-          "@context": "https://schema.org",
-          "@type": "TrainingMaterial",
-          "http://purl.org/dc/terms/conformsTo": {
-            "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-            "@type": "CreativeWork"
-            },
-          "@id": "URL of the material",
-          "name": "Title of the material",
-          "description": "A brief description of the material",
-          "keywords": "A few keywords separated by commas",
-          "author": {
-            "@type": "Person",
-            "name": "Author Name"
-            },
-          "audience": "A brief description of the intended audience",
-          "inLanguage": ["en-US", "fr-FR"],
-          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "learningResourceType": "tutorial",
-          "url": "URL of the material",
-          "datePublished": "2025-08-21T14:46:00+00:00",
-          "dateModified": "2025-08-21T14:46:00+00:00",
-          "contributor": {
-            "@type": "Person",
-            "name": "Author Name"
-            }
-        }
+title: Template
+description: This is the template for documentation pages to use. The template also provides guidance for how documentation pages should be created.
 ---
+
+<Head>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@type": "CreativeWork",
+        "identifier": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+      },
+      "name": "Template",
+      "description": "Describe the resource here",
+      "url": "Include URL here",
+      "learningResourceType": "documentation",
+      "inLanguage": ["en-US"],
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "keywords": "Include keywords here, separated by commas",
+      "author": {
+        "@type": "Organization",
+        "name": "Pan-Canadian Genome Library"
+      },
+      "audience": "Describe the audience here",
+      "datePublished": "2025-09-12T15:51:00+00:00",
+      "dateModified": "2025-09-17T16:33:00+00:00",
+    })}
+  </script>
+</Head>
 
 # Template
 
@@ -90,6 +82,17 @@ Alternatively, consider if the topic for the guide is too broad and separate gui
 - Data Access
     - Applying for Access to Controlled Data
     - DACO FAQs
+
+## Note: Front Matter and Bioschemas Markup
+All docs on our site **must** include the title and description fields. This is necessary for the page to be labelled correctly on the sidebar and other pages.
+
+All docs on our site **must** also use Bioschemas markup. This will make our materials more findable. The markup should be placed after the front matter: see the .md for this page as an example. 
+- The mandatory Bioschemas fields you need to provide are: "@id", "name", "description" and "keywords"
+- You must include, but do not need to edit the fields: "@context", "@type", and "dct:conformsTo" 
+- Please also include: "author", "audience", "inLanguage", "license", "learningResourceType", "url", and "datePublished"
+- Optional fields are: "dateModified", "contributor", and any other relevant Bioschemas fields
+
+You can inspect a page and search for a phrase from your markup (e.g. json) in order to check if your markup is injected in the page. To confirm that the Bioschemas markup is correct, contact WG5.
 
 ## Conclusion
 Describe briefly the outcomes of following the guide, as well as the next steps.
