@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Pan-Canadian Genome Library Training & Documentation',
-  tagline: 'Welcome!',
+  title: 'Pan-Canadian Genome Library',
+  tagline: 'Training & Documentation',
   favicon: 'img/leaf-only.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

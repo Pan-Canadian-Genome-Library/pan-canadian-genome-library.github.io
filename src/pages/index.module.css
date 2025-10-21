@@ -20,8 +20,51 @@
   }
 }
 
+/* For About and Resources section */
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+}
+
+.buttonLink {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-hero-text);
+  border: 2px solid var(--ifm-color-primary);
+  margin-right: 2rem;
+}
+
+[data-theme='dark'] .buttonLink {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-footer);
+  border: 2px solid var(--ifm-color-primary)
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section{
+  border-top: 3px solid var(--ifm-background-surface-color);
+  background-color: var(--category-border-color);
+}
+
+[data-theme='dark'] .section {
+  border-top: 3px solid var(--ifm-background-color);
+  background-color: var(--ifm-navbar-background-color);
+}
+
+.aboutSection {
+  border-radius: 15px;
+  box-shadow: var(--category-block-shadow);
+  padding: 2rem;
+}
+
+.resourcesSection{
+  border-radius: 15px;
+  box-shadow: var(--category-block-shadow);
+  padding: 2rem 2rem 0 2rem;
 }

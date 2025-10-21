@@ -103,7 +103,7 @@ This command generates static content into the `build` directory and can be serv
 ## Deployment Process
 1. Once you have made your changes and tested that the site displays them correctly locally, commit your changes to the main branch.
 
->[!WARN]
+>[!WARNING]
 > Review process for approving changes is in development
 
 2. The site can be deployed to the `gh-pages` branch using the yarn `deploy` command. This command builds the website and pushes to the `gh-pages` branch.
