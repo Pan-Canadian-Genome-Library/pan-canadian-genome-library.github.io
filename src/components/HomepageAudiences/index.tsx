@@ -29,37 +29,37 @@ const categories: Record<string, Category> = {
 const resources: Resource[] = [
     {
         title: "Guides for Researchers",
-        link: "/researcher/docs/",
+        link: "/researcher/docs",
         description: "Use the Research Portal, request data access, and more",
         category: "docs",
     },
     {
         title: "Guides for Clinicians",
-        link: "/clinician/docs/",
+        link: "/clinician/docs",
         description: "Will be available with future versions of the PCGL",
         category: "docs",
     },
     {
         title: "Guides for Participants & Public",
-        link: "/participant-public/docs/",
+        link: "/participant-public/docs",
         description: "Will be available with future versions of the PCGL",
         category: "docs",
     },
     {
         title: "Training for Researchers",
-        link: "/researcher/catalog/",
+        link: "/researcher/catalog",
         description: "Learn about genomics analyses, data governance, and more",
         category: "catalogs"
     },
     {
         title: "Training for Clinicians",
-        link: "/clinician/catalog/",
+        link: "/clinician/catalog",
         description: "Learn about genomics in the clinic",
         category: "catalogs"
     },
     {
         title: "Training for Participants and the Public",
-        link: "/participant-public/catalog/",
+        link: "/participant-public/catalog",
         description: "Learn about genomics and personalized healthcare",
         category: "catalogs"
     },
