@@ -60,15 +60,6 @@ const config: Config = {
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'clinician',
-        path: 'clinician',
-        routeBasePath: 'clinician',
-        sidebarPath: './clinicianSidebars.ts',
-      },
-    ],
-    [
          '@docusaurus/plugin-content-docs',
       {
         id: 'participant-public',
@@ -85,7 +76,7 @@ const config: Config = {
     navbar: {
       title: 'PCGL Training & Documentation',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'PCGL logo: Maple leaf in greyscale overlayed with dark grey, red, light grey and black bands.',
         src: 'img/leaf-only.png',
       },
       items: [
@@ -95,7 +86,7 @@ const config: Config = {
           position: 'left',
           label: 'For Researchers',
         },
-        {to: '/clinician/overview', label: 'For Clinicians', position: 'left'},
+        //{to: '/clinician/overview', label: 'For Clinicians', position: 'left'},
         {to: '/participant-public/overview', label: 'For Participants & Public', position: 'left'},
         //Language dropdown commented out until French content provided
         //{
@@ -123,10 +114,6 @@ const config: Config = {
             {
               label: 'For Researchers',
               to: '/researcher/overview',
-            },
-            {
-              label: 'For Clinicians',
-              to: '/clinician/overview',
             },
             {
               label: 'For Participants & Public',

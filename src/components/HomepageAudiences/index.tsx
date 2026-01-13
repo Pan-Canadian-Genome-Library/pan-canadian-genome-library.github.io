@@ -33,12 +33,12 @@ const resources: Resource[] = [
         description: "Use the Research Portal, request data access, and more",
         category: "docs",
     },
-    {
-        title: "Guides for Clinicians",
-        link: "/clinician/docs",
-        description: "Will be available with future versions of the PCGL",
-        category: "docs",
-    },
+    //{
+        //title: "Guides for Clinicians",
+        //link: "/clinician/docs",
+        //description: "Will be available with future versions of the PCGL",
+        //category: "docs",
+    //},
     {
         title: "Guides for Participants & Public",
         link: "/participant-public/docs",
@@ -51,12 +51,12 @@ const resources: Resource[] = [
         description: "Learn about genomics analyses, data governance, and more",
         category: "catalogs"
     },
-    {
-        title: "Training for Clinicians",
-        link: "/clinician/catalog",
-        description: "Learn about genomics in the clinic",
-        category: "catalogs"
-    },
+    //{
+        //title: "Training for Clinicians",
+        //link: "/clinician/catalog",
+        //description: "Learn about genomics in the clinic",
+        //category: "catalogs"
+    //},
     {
         title: "Training for Participants and the Public",
         link: "/participant-public/catalog",
