@@ -6,66 +6,86 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #346b8c;
-  --ifm-color-primary-dark: #2f607e;
-  --ifm-color-primary-darker: #2c5b77;
-  --ifm-color-primary-darkest: #244b62;
-  --ifm-color-primary-light: #39769a;
-  --ifm-color-primary-lighter: #3b7aa0;
-  --ifm-color-primary-lightest: #3c7ca2;
+  --ifm-color-primary: #054a74;
+  --ifm-color-primary-dark: #044368;
+  --ifm-color-primary-darker: #043f63;
+  --ifm-color-primary-darkest: #043451;
+  --ifm-color-primary-light: #065180;
+  --ifm-color-primary-lighter: #065585;
+  --ifm-color-primary-lightest: #076097;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-color: #000000;
-  --ifm-color-footer: #eaeaeb;
+  --ifm-color-footer: var(--ifm-color-primary);
   --ifm-hero-text: #ffffff;
+  --ifm-sidebar-colour: #F2ebeb;
+  --ifm-accent-dark: #761248;
+  --ifm-menu-color: var(--ifm-color-primary);
+  --ifm-menu-color-active: var(--ifm-accent-dark);
+  --ifm-menu-color-background-active: #ddc3d1;
+  --ifm-menu-color-background-hover: #ddc3d1;
 
  /* Front Page category blocks */
-  --category-border-color: #eaeaeb;
-  --category-card-color: #eaeaeb;
-  --card-title-color: var(--ifm-color-primary);
-  --category-title-color: #000000;
+  --category-border-color: var(--ifm-sidebar-colour);
+  --category-category-color: var(--ifm-sidebar-colour);
+  --category-card-color: var(--ifm-accent-dark);
+  --card-title-color: var(--ifm-hero-text);
+  --category-title-color: var(--ifm-font-color);
+
+  /* Fonts */
+  --ifm-font-family-base: 'Work Sans', sans-serif;
+  --ifm-heading-font-family: 'Jost', sans-serif;
 }
-
-
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #1fb7de;
-  --ifm-color-primary-dark: #1ca5c8;
-  --ifm-color-primary-darker: #1a9cbd;
-  --ifm-color-primary-darkest: #1992b2;
-  --ifm-color-primary-light: #34bfe3;
-  --ifm-color-primary-lighter: #3fc2e4;
-  --ifm-color-primary-lightest: #60cde9;
+  --ifm-color-primary: #96cae9;
+  --ifm-color-primary-dark: #76bae2;
+  --ifm-color-primary-darker: #67b2df;
+  --ifm-color-primary-darkest: #379ad5;
+  --ifm-color-primary-light: #b6daf0;
+  --ifm-color-primary-lighter: #c5e2f3;
+  --ifm-color-primary-lightest: #f5fafd;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-font-color: #ffffff;
-  --ifm-color-footer: #0d0d0d;
+  --ifm-color-footer: #043451;
   --ifm-hero-text: #ffffff;
+  --ifm-sidebar-colour: #111111;
+  --ifm-accent-dark: #530d32;
+  --ifm-menu-color: var(--ifm-color-primary);
+  --ifm-menu-color-active: #ffffff;
+  --ifm-menu-color-background-active: var(--ifm-accent-dark);
+  --ifm-menu-color-background-hover: var(--ifm-accent-dark);
+  
   
   /* Front Page category blocks */
-  --category-border-color: #0d0d0d;
-  --category-card-color: var(--ifm-background-color);
-  --category-category-color: #0d0d0d;
-  --card-title-color: var(--ifm-color-primary);
+  --category-border-color: #111111;
+  --category-card-color: var(--ifm-accent-dark);
+  --category-category-color: #111111;
+  --card-title-color: var(--ifm-font-color);
   --category-title-color: #ffffff;
 }
 
 .footer {
     background-color: var(--ifm-color-footer);
-    color: var(--ifm-color-primary); 
+    color: var(--ifm-hero-text); 
    }
 
 [data-theme='dark'] .footer {
     background-color: var(--ifm-color-footer);
-    color: var(--ifm-color-primary); 
+    color: var(--ifm-hero-text); 
     }
 
 .footer__title {
-    color: var(--ifm-color-primary);
+    color: var(--ifm-hero-text);
 }
 
 .footer__link-item {
-   color: var(--ifm-font-color);
+   color: var(--ifm-hero-text);
+}
+
+.footer__logo {
+  max-width: 16rem;
 }
 
 .hero {
@@ -86,4 +106,114 @@
       font-size: 2.25rem;
     }
   }
+}
+
+/* Define fonts: Jost for headings */
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/fonts/Jost/static/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/fonts/Jost/static/Jost-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/fonts/Jost/static/Jost-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/static/fonts/Jost/static/Jost-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Work Sans for main text*/
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/static/fonts/Work_Sans/static/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/static/fonts/Work_Sans/static/WorkSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/static/fonts/Work_Sans/static/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/static/fonts/Work_Sans/static/WorkSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/static/fonts/Work_Sans/static/WorkSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Target the Left Sidebar */
+.theme-doc-sidebar-container {
+  font-weight: 500;
+  background-color: var(--ifm-sidebar-colour);
+}
+
+/* Target the Navigation Bar (Top) */
+.navbar {
+  font-weight: 500;
+}
+
+/* Target the Footer (Site Map) */
+.footer {
+  font-weight: 500;
+}
+
+/* Target Breadcrumbs (The "path" links at the top of docs) */
+.breadcrumbs__link {
+  font-weight: 500;
+  background-color: var(--ifm-sidebar-colour);
+}
+
+[data-theme='dark'] .breadcrumbs__link {
+  background-color: var(--ifm-accent-dark);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-background-color);
+}
+
+/* Target the description paragraph specifically inside a DocCard */
+.card p[class*='cardDescription'] {
+  font-weight: 500 !important;
+  font-family: 'Work Sans', sans-serif;
 }

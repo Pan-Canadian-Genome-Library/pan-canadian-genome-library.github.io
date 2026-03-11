@@ -78,6 +78,7 @@ const config: Config = {
       logo: {
         alt: 'PCGL logo: Maple leaf in greyscale overlayed with dark grey, red, light grey and black bands.',
         src: 'img/leaf-only.png',
+        srcDark: 'img/leaf-only-white.png',
       },
       items: [
         {
@@ -107,6 +108,10 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'PCGL logo. Left: Maple leaf in white. Right: Pan-Canadian Genome Library. Bibliothèque génomique pancanadienne.',
+        src: 'img/pcgl-logo-v06_rev_white.png',
+      },
       links: [
         {
           title: 'Resources',
