@@ -9,14 +9,13 @@ This website in intended to display documentation and training materials for use
 - Documentation is organized based on the audience it is relevant to (e.g. all resources for researchers are grouped together).
 
 ### Repository structure
-This repo has 2 branches:
+This repo has 2 protected branches:
 - `main` contains the source code for the website
 - `gh-pages` contains the deployment of the website
 
 Below is a diagram of the `main` branch. 
 ```
 .
-├── /clinician/                      # resources for clinicians
 ├── /participant-public/             # resources for research participants and members of the public
 ├── /researcher/                     # resources for researchers
 │   ├── 00-overview.mdx              # this page lists the resources available for researchers
@@ -35,20 +34,15 @@ Below is a diagram of the `main` branch.
 │   └── /pages/                         # homepage content and styling
 │
 ├── /static/                         # contains static files like images
-├── /templates/                      # contains Markdown template
+├── /templates/                      # contains Markdown templates for guides and FAQ pages
 └── [Docusaurus files for configuration, sidebars, etc.]
 ```
 > [!NOTE]
 > Not all files are shown on the diagram. The `researcher` directory is expanded to show the structure of documentation for each audience.
 
-## Contributing to documentation
-To contribute documentation to be published on this website, you must first follow the PCGL Documentation Review process (in development).
-
-Once your content has been approved to be shared with the public, please follow the process below.
-
-### Prerequisites
+## Prerequisites for reviewing or contributing to docs
 You will need:
-- A GitHub account with access to contribute to this repo: please contact pcgl.training@bioinformatics.ca to set this up
+- A GitHub account with access to this repo: please contact pcgl.training@bioinformatics.ca to set this up
     - You must also have authentication set up (e.g. SSH key)
 - A code editor like Visual Studio Code is **strongly recommended**
 - [Node.js](https://nodejs.org/en/download/) version 18 or higher installed
@@ -83,15 +77,65 @@ yarn start
 ```
 A browser window should open to `http://localhost:3000/`. Most changes are reflected live without having to restart the server.
 
-### Adding new documentation
-To add new documentation, please copy the Markdown template:
+## Contributing to documentation
+To contribute documentation to be published on this website, please follow the PCGL Documentation Review process.
+
+Once your content has been approved to be shared with the public, please follow the process below.
+
+### 1. Sync your local main branch
+
 ```bash
-cp templates/04-template.md
+git fetch origin
+git checkout main
+git pull origin main
+```
+### 2. Create a new branch or switch to an existing branch
+
+Create a new branch (using a descriptive name)
+```bash
+git checkout -b feature/new-branch-name
+```
+
+Or switch to an existing branch
+```bash
+git checkout feature/existing-branch-name
+```
+
+### 3. Edit or add new documentation
+To add new documentation, please copy the appropriate Markdown template:
+```bash
+cp templates/0X-guide-template.md
+cp templates/0X-FAQ-template.md
 ```
 Then:
 - Move it to the appropriate location
 - Edit the front matter and Bioschemas fields
 - Copy in your approved documentation, reformatting as needed
+
+#### Naming conventions & page ordering
+- The order documents appear in on the site is determined by names. We use numbering to ensure pages display in the correct order. 
+    - E.g. Under researcher, 01-docs/ is listed first, then 02-resources.mdx, and 03-catalog.mdx
+
+        ```
+        /researcher/
+        ├── /01-docs/ 
+        ├── 02-resources.mdx 
+        └── 03-catalog.mdx
+        ```
+
+- Documentation can be nested by placing files within a folder. To create a landing page for the nested pages, name the .md or .mdx with the same name as the folder. 
+    - E.g. Under researcher, 01-docs/ contains 01-docs.mdx
+
+        ```
+        /researcher/
+        └── /01-docs/
+            └── 01-docs.mdx 
+        ```
+
+    - To display the nested pages as cards on the landing page, use an .mdx and the `<DocCardList/>` React component (see 01-docs/ for examples)
+
+> [!NOTE]
+> Unless specified in the front matter, Docusaurus will use the file name (excluding numbering and file extension) as the id for the page. See [Docusaurus documentation](https://docusaurus.io/docs/create-doc) for details on customizing page ordering.
 
 ### Optional: Build
 You do not need to build the site locally, but if you want to:
@@ -100,13 +144,49 @@ yarn build
 ```
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Deployment Process
-1. Once you have made your changes and tested that the site displays them correctly locally, commit your changes to the main branch.
+### 4. Test, commit and push
+Once you have made your changes, test that the site displays them correctly locally (see *Viewing the site* above).
+Then, commit your changes and push your branch to GitHub.
 
->[!WARNING]
-> Review process for approving changes is in development
+```bash
+git add .    # Or use git add <specific files>
+git commit -m "Brief description of changes"
+git push origin feature/branch-name
+```
 
-2. The site can be deployed to the `gh-pages` branch using the yarn `deploy` command. This command builds the website and pushes to the `gh-pages` branch.
+### 5. Open a Pull Request (PR) 
+1. Under `Pull requests`, choose `New pull request` 
+2. Compare changes between your branch and `main`. Note that comparing changes are directional, so the `base:` should be `main` and `compare:` should be your new branch.
+3. Provide a brief summary of your changes.
+
+## Review Instructions for Docs Site Reviewers team
+1. Review the PR: check for conflicts, read the description, and review the "Files changed" tab.
+
+2. Test that the site builds correctly: 
+    
+    a. If you have not yet done so, follow the local setup instructions above
+
+    b. Run the commands below to ensure you are up to date and switch branches to the branch in review
+
+    ```bash
+    git fetch origin
+    git checkout feature/branch-to-review
+    ```
+   
+   c. Test that the site builds correctly and the modified pages display correctly (see *Viewing the site* instructions above)
+
+4. Submit your review of the PR on GitHub: request changes if there are issues or approve the PR.
+
+5. Once approved, use the "squash and merge" option and notify pcgl.training@bioinformatics.ca (or other members of the Docs Site Updaters team) that there are approved changes pending deployment. 
+
+## Deployment Instructions for Docs Site Updaters team
+1. Pull the latest `main`:
+```bash
+git checkout main
+git pull origin main
+```
+
+2. The site is deployed to the `gh-pages` branch using the yarn `deploy` command. This command builds the website and pushes to the `gh-pages` branch.
 
 Using SSH:
 ```bash
