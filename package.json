@@ -29,6 +29,10 @@
     "react-dom": "^19.0.0",
     "yarn": "^1.22.22"
   },
+  "overrides": {
+    "serialize-javascript": "^7.0.5",
+    "fast-uri": "^3.1.2"
+  },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.0",
     "@docusaurus/tsconfig": "^3.10.0",
