@@ -1,0 +1,46 @@
+{
+  "link.title.Resources": {
+    "message": "Ressources",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.Connect with us": {
+    "message": "Nous joindre",
+    "description": "The title of the footer links column with title=Connect with us in the footer"
+  },
+  "link.title.More": {
+    "message": "Plus",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.For Researchers": {
+    "message": "Pour les chercheurs",
+    "description": "The label of footer link with label=For Researchers linking to docs/overview"
+  },
+  "link.item.label.For Participants & Public": {
+    "message": "Pour les participants et le public",
+    "description": "The label of footer link with label=For Participants & Public linking to /participant-public/overview"
+  },
+  "link.item.label.Contact PCGL": {
+    "message": "Contactez la BGPC",
+    "description": "The label of footer link with label=Contact PCGL linking to https://www.genomelibrary.ca/contact-us/"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/genome-library/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/Pan-Canadian-Genome-Library"
+  },
+  "copyright": {
+    "message": "La BGPC est financée par les Instituts de recherche en santé du Canada (IRSC). <br> Copyright © 2026 Bibliothèque génomique pancanadienne. Construit avec Docusaurus.",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "PCGL logo. Left: Maple leaf in white. Right: Pan-Canadian Genome Library. Bibliothèque génomique pancanadienne.",
+    "description": "The alt text of footer logo"
+  },
+  "link.item.label.Subscribe to our mailing list": {
+    "message": "Abonnez-vous à notre infolettre",
+    "description": "The label of footer link with label=Subscribe to our mailing list linking to https://genomelibrary.ca/subscribe/"
+  }
+}

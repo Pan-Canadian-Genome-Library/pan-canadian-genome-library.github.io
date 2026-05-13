@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const isFrench = process.env.DOCUSAURUS_CURRENT_LOCALE === 'fr';
 const config: Config = {
   title: 'Pan-Canadian Genome Library',
   tagline: 'Training & Documentation',
@@ -30,7 +31,7 @@ const config: Config = {
   onBrokenLinks: 'throw',
   markdown: {
     hooks: {
-  onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownLinks: 'warn',
     },
   },
 
@@ -48,7 +49,7 @@ const config: Config = {
       {
         docs: {
           path: 'researcher',
-          routeBasePath: 'researcher',
+          routeBasePath: isFrench ? 'chercheur' : 'researcher',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -122,7 +123,7 @@ const config: Config = {
           items: [
             {
               label: 'For Researchers',
-              to: '/researcher/overview',
+              to: isFrench ? '/chercheur/overview' : '/researcher/overview',
             },
             {
               label: 'For Participants & Public',
@@ -135,7 +136,15 @@ const config: Config = {
           items: [
              {
               label: 'Contact PCGL',
-              href: 'https://www.genomelibrary.ca/contact-us/',
+              href: isFrench
+              ? 'https://genomelibrary.ca/fr/nous-joindre/'
+              : 'https://www.genomelibrary.ca/contact-us/',
+            },
+            {
+              label: 'Subscribe to our mailing list',
+              href: isFrench 
+                ? 'https://genomelibrary.ca/fr/abonnez-vous/' 
+                : 'https://genomelibrary.ca/subscribe/',
             },
             {
               label: 'LinkedIn',

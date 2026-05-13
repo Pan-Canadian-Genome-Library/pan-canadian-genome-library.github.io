@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "BGPC - Formation et documentation",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "BGPC logo: Maple leaf in greyscale overlayed with dark grey, red, light grey and black bands.",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.For Researchers": {
+    "message": "Pour les chercheurs",
+    "description": "Navbar item with label For Researchers"
+  },
+  "item.label.For Participants & Public": {
+    "message": "Pour les participants et le public",
+    "description": "Navbar item with label For Participants & Public"
+  },
+  "item.label.PCGL": {
+    "message": "BGPC",
+    "description": "Navbar item with label PCGL"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
