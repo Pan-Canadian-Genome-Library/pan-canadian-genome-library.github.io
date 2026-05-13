@@ -321,5 +321,57 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.categories.docs.title": {
+    "message": "PCGL Guides"
+  },
+  "homepage.categories.docs.desc": {
+    "message": "Resources for using the PCGL"
+  },
+  "homepage.categories.catalogs.title": {
+    "message": "Training Catalog"
+  },
+  "homepage.categories.catalogs.desc": {
+    "message": "Training for PCGL users"
+  },
+  "homepage.resource.resDocs.title": {
+    "message": "Guides for Researchers"
+  },
+  "homepage.resource.resDocs.link": {
+    "message": "/chercheur/docs"
+  },
+  "homepage.resource.resDocs.desc": {
+    "message": "Use the Research Portal, request data access, and more"
+  },
+  "homepage.resource.pubDocs.title": {
+    "message": "Guides for Participants & Public"
+  },
+  "homepage.resource.pubDocs.link": {
+    "message": "/participant-public/docs"
+  },
+  "homepage.resource.pubDocs.desc": {
+    "message": "Will be available with future versions of the PCGL"
+  },
+  "homepage.resource.resCat.title": {
+    "message": "Training for Researchers"
+  },
+  "homepage.resource.resCat.link": {
+    "message": "/chercheur/catalog"
+  },
+  "homepage.resource.resCat.desc": {
+    "message": "Learn about genomics analyses, data governance, and more"
+  },
+  "homepage.resource.pubCat.title": {
+    "message": "Training for Participants and the Public"
+  },
+  "homepage.resource.pubCat.link": {
+    "message": "/participant-public/catalog"
+  },
+  "homepage.resource.pubCat.desc": {
+    "message": "Learn about genomics and personalized healthcare"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
   }
 }

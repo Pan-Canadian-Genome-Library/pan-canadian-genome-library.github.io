@@ -1,6 +1,8 @@
 import React from "react";
 import Heading from "@theme/Heading"
 import styles from "./styles.module.css"
+import Link from '@docusaurus/Link';
+import { translate } from '@docusaurus/Translate';
 
 interface Resource {
     title: string;
@@ -17,56 +19,44 @@ interface Category {
 
 const categories: Record<string, Category> = {
     docs: {
-        title: "PCGL Guides",
-        description: "Resources for using the PCGL", 
+        title: translate({ message: "PCGL Guides", id: "homepage.categories.docs.title" }),
+        description: translate({ message: "Resources for using the PCGL", id: "homepage.categories.docs.desc" }), 
     },
     catalogs: {
-        title: "Training Catalog",
-        description: "Training for PCGL users ", 
+        title: translate({ message: "Training Catalog", id: "homepage.categories.catalogs.title" }),
+        description: translate({ message: "Training for PCGL users", id: "homepage.categories.catalogs.desc" }), 
     },
 };
 
 const resources: Resource[] = [
     {
-        title: "Guides for Researchers",
-        link: "/researcher/docs",
-        description: "Use the Research Portal, request data access, and more",
-        category: "docs",
-    },
-    //{
-        //title: "Guides for Clinicians",
-        //link: "/clinician/docs",
-        //description: "Will be available with future versions of the PCGL",
-        //category: "docs",
-    //},
-    {
-        title: "Guides for Participants & Public",
-        link: "/participant-public/docs",
-        description: "Will be available with future versions of the PCGL",
+        title: translate({ message: "Guides for Researchers", id: "homepage.resource.resDocs.title" }),
+        link: translate({ message: "/researcher/docs", id: "homepage.resource.resDocs.link" }),
+        description: translate({ message: "Use the Research Portal, request data access, and more", id: "homepage.resource.resDocs.desc" }),
         category: "docs",
     },
     {
-        title: "Training for Researchers",
-        link: "/researcher/catalog",
-        description: "Learn about genomics analyses, data governance, and more",
+        title: translate({ message: "Guides for Participants & Public", id: "homepage.resource.pubDocs.title" }),
+        link: translate({ message: "/participant-public/docs", id: "homepage.resource.pubDocs.link" }),
+        description: translate({ message: "Will be available with future versions of the PCGL", id: "homepage.resource.pubDocs.desc" }),
+        category: "docs",
+    },
+    {
+        title: translate({ message: "Training for Researchers", id: "homepage.resource.resCat.title" }),
+        link: translate({ message: "/researcher/catalog", id: "homepage.resource.resCat.link" }),
+        description: translate({ message: "Learn about genomics analyses, data governance, and more", id: "homepage.resource.resCat.desc" }),
         category: "catalogs"
     },
-    //{
-        //title: "Training for Clinicians",
-        //link: "/clinician/catalog",
-        //description: "Learn about genomics in the clinic",
-        //category: "catalogs"
-    //},
     {
-        title: "Training for Participants and the Public",
-        link: "/participant-public/catalog",
-        description: "Learn about genomics and personalized healthcare",
+        title: translate({ message: "Training for Participants and the Public", id: "homepage.resource.pubCat.title" }),
+        link: translate({ message: "/participant-public/catalog", id: "homepage.resource.pubCat.link" }),
+        description: translate({ message: "Learn about genomics and personalized healthcare", id: "homepage.resource.pubCat.desc" }),
         category: "catalogs"
     },
 ];
 
-const Card = ({ title, description, link, image }) => (
-    <a href={link} className={styles.card}>
+const Card = ({ title, description, link, image }: Omit<Resource, 'category'>) => (
+    <Link to={link} className={styles.card}>
     {image && (
       <img src={image} alt={`${title} icon`} className={styles.cardImage} />
     )}
@@ -74,10 +64,15 @@ const Card = ({ title, description, link, image }) => (
       {title}
     </Heading>
     <p className={styles.cardDescription}>{description}</p>
-  </a>
+  </Link>
 );
 
-const CategorySection = ({ category, items }) => (
+interface CategorySectionProps {
+  category: string;
+  items: Resource[];
+}
+
+const CategorySection = ({ category, items }: CategorySectionProps) => (
   <div className={`${styles.categorySection} ${styles[category]}`}>
     <Heading as="h2" className={styles.categoryHeader}>
       {categories[category].title}
@@ -94,7 +89,7 @@ const CategorySection = ({ category, items }) => (
 );
 
 const HomepageAudiences = () => {
-    const categorizedResources = resources.reduce((acc, resource) => {
+    const categorizedResources = resources.reduce<Record<string, Resource[]>>((acc, resource) => {
         (acc[resource.category] = acc[resource.category] || []).push(resource);
         return acc;
     }, {});

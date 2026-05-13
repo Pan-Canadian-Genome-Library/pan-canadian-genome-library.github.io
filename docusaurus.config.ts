@@ -41,6 +41,10 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
+    localeConfigs: {
+      en: { label: 'English' },
+      fr: { label: 'Français' },
+    },
   },
 
   presets: [
@@ -123,7 +127,7 @@ const config: Config = {
           items: [
             {
               label: 'For Researchers',
-              to: isFrench ? '/chercheur/overview' : '/researcher/overview',
+              to: isFrench ? '/chercheur/apercu' : '/researcher/overview',
             },
             {
               label: 'For Participants & Public',

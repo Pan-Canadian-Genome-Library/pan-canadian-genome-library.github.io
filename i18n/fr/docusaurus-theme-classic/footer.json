@@ -13,7 +13,7 @@
   },
   "link.item.label.For Researchers": {
     "message": "Pour les chercheurs",
-    "description": "The label of footer link with label=For Researchers linking to docs/overview"
+    "description": "The label of footer link with label=For Researchers linking to /researcher/overview"
   },
   "link.item.label.For Participants & Public": {
     "message": "Pour les participants et le public",
