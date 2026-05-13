@@ -1,0 +1,68 @@
+.h5pContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0;
+}
+
+.h5pWrapper {
+  position: relative;
+  max-width: 1000px; 
+  width: 100%;
+  margin: 0rem auto 2rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  transition: box-shadow 0.2s ease;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.h5pWrapper:hover {
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.h5pFrame {
+  width: 100%;
+  margin: 0 auto;
+  border: 0;
+  display: block;
+  overflow: visible;
+}
+
+.loadingContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.spinner {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  border-top-color: #333;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .h5pContainer {
+    padding: 0 0.5rem;
+  }
+  
+  .h5pWrapper {
+    border-radius: 4px;
+    padding: 0.25rem;
+  }
+}

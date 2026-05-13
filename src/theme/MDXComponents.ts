@@ -4,6 +4,7 @@ import MDXComponents from '@theme-original/MDXComponents';
 import DocCardList from '@theme/DocCardList'
 import DataTable from '@site/src/components/DataTable';
 import ResourceGallery from '@site/src/components/ResourceGallery';
+import H5P from '@site/src/components/H5P';
 
 const components: typeof MDXComponents & {
 
@@ -14,7 +15,8 @@ const components: typeof MDXComponents & {
     ...MDXComponents,
     DocCardList,
     DataTable,
-    ResourceGallery
+    ResourceGallery,
+    H5P
 };
     
 
