@@ -99,10 +99,10 @@ const config: Config = {
         //{to: '/clinician/overview', label: 'For Clinicians', position: 'left'},
         {to: '/participant-public/overview', label: 'For Participants & Public', position: 'left'},
         //Language dropdown commented out until French content provided
-        //{
-          //type: 'localeDropdown',
-          //position: 'right',
-        //},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://genomelibrary.ca',
           label: 'PCGL',
