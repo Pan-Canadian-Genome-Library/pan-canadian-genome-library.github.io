@@ -217,3 +217,29 @@
   font-weight: 500 !important;
   font-family: 'Work Sans', sans-serif;
 }
+
+/* --- Light Mode Announcement Bar --- */
+:root [class*="announcementBar_"] {
+  background-color: #fff8e6 !important; /* Warning contrast background */
+  color: #4d3800 !important;            /* Warning contrast foreground */
+  border-bottom: 2px solid #f4c20d;     /* Warning base accent border */
+}
+
+/* Ensure any links inside the light mode banner remain readable */
+:root [class*="announcementBar_"] a {
+  color: #4d3800;
+  text-decoration: underline;
+}
+
+/* --- Dark Mode Announcement Bar --- */
+html[data-theme='dark'] [class*="announcementBar_"] {
+  background-color: rgba(255, 186, 0, 0.15) !important; /* 15% opacity warning tint */
+  color: #ffe699 !important;                             /* Brightened text yellow */
+  border-bottom: 2px solid #ffba00;                     /* Warning base accent border */
+}
+
+/* Ensure any links inside the dark mode banner remain readable */
+html[data-theme='dark'] [class*="announcementBar_"] a {
+  color: #ffe699;
+  text-decoration: underline;
+}

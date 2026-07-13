@@ -115,6 +115,13 @@ const config: Config = {
         },
       ],
     },
+    ...(isFrench && {
+      announcementBar: {
+        id: 'translation_banner',
+        content: '⚠️ En cours de construction - La traduction française de notre site web est présentement en cours.',
+        isCloseable: false,
+      },
+    }),  
     footer: {
       style: 'dark',
       logo: {

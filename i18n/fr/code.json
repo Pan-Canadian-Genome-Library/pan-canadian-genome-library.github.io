@@ -343,6 +343,15 @@
   "homepage.resource.resDocs.desc": {
     "message": "Use the Research Portal, request data access, and more"
   },
+  "homepage.resource.resRes.title": {
+    "message": "Documents for Researchers"
+  },
+  "homepage.resource.resRes.link": {
+    "message": "/chercheur/ressources"
+  },
+  "homepage.resource.resRes.desc": {
+    "message": "Consent templates, PCGL frameworks, and more"
+  },
   "homepage.resource.pubDocs.title": {
     "message": "Guides for Participants & Public"
   },

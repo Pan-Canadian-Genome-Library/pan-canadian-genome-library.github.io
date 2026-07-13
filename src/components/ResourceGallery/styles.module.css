@@ -1,14 +1,37 @@
-.container {
-  margin-bottom: 2rem;
+/* Outer wrapper that holds the track and absolute arrows */
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Gives room so arrows don't clip card contents */
+  box-sizing: border-box;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* The horizontal scroll track */
+.sliderTrack {
+  display: flex;
   gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 1rem 20px;
+/* snap to cards while dragging/scrolling */
+  scroll-snap-type: x mandatory;
+/* Hide default scrollbars */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sliderTrack::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .card {
+  flex: 0 0 325px;
+  min-width: 260px;
+  scroll-snap-align: center;
+  box-sizing: border-box;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 12px;
   padding: 1.25rem;
@@ -16,6 +39,44 @@
   flex-direction: column; /* Stack children vertically */
   background-color: var(--ifm-card-background-color);
   transition: transform 0.2s ease;
+}
+
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--ifm-color-primary);
+  color: var(--ifm-hero-text);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+
+/* Show arrows when hovering over the outer gallery section */
+.carouselContainer:hover .arrowButton {
+  opacity: 1;
+}
+
+.arrowButton:hover {
+  background: var(--ifm-color-primary-darker);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 5px;
 }
 
 .card:hover {
@@ -67,7 +128,7 @@
 }
 
 .tag {
-  background: var(--ifm-color-emphasis-200);
+  background: var(--tag-bg-light);
   padding: 2px 10px;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -78,15 +139,43 @@
   display: block;
   text-align: center;
   background-color: var(--ifm-color-primary);
-  color: white !important;
+  color: var(--ifm-hero-text) !important;
   text-decoration: none !important;
   padding: 0.6rem;
   border-radius: 6px;
   font-weight: bold;
   font-size: 0.9rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
-  filter: brightness(0.9);
+  transform: translateY(-2px); 
+  background-color: var(--ifm-color-primary-darker); 
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
 }
 
+.button:active {
+  transform: translateY(0);
+}
+
+[data-theme='dark'] .button {
+  background-color: var(--ifm-accent-dark);
+}
+
+[data-theme='dark'] .button:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--ifm-menu-color-active) 5%, transparent);
+}
+
+[data-theme='dark'] .arrowButton {
+  background-color: var(--ifm-accent-dark);
+}
+
+[data-theme='dark'] .arrowButton:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--ifm-menu-color-active) 5%, transparent);
+}
+
+[data-theme='dark'] .tag {
+  background: var(--tag-bg-dark);
+}

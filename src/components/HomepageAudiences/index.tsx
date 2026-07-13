@@ -36,6 +36,12 @@ const resources: Resource[] = [
         category: "docs",
     },
     {
+        title: translate({ message: "Documents for Researchers", id: "homepage.resource.resRes.title" }),
+        link: translate({ message: "/researcher/resources", id: "homepage.resource.resRes.link" }),
+        description: translate({ message: "Consent templates, PCGL frameworks, and more", id: "homepage.resource.resRes.desc" }),
+        category: "docs",
+    },
+    {
         title: translate({ message: "Guides for Participants & Public", id: "homepage.resource.pubDocs.title" }),
         link: translate({ message: "/participant-public/docs", id: "homepage.resource.pubDocs.link" }),
         description: translate({ message: "Will be available with future versions of the PCGL", id: "homepage.resource.pubDocs.desc" }),
