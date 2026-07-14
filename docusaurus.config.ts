@@ -53,7 +53,7 @@ const config: Config = {
       {
         docs: {
           path: 'researcher',
-          routeBasePath: isFrench ? 'chercheur' : 'researcher',
+          routeBasePath: 'researcher',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -134,7 +134,7 @@ const config: Config = {
           items: [
             {
               label: 'For Researchers',
-              to: isFrench ? '/chercheur/apercu' : '/researcher/overview',
+              to: '/researcher/overview',
             },
             {
               label: 'For Participants & Public',

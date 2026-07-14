@@ -338,7 +338,7 @@
     "message": "Guides for Researchers"
   },
   "homepage.resource.resDocs.link": {
-    "message": "/chercheur/docs"
+    "message": "/researcher/docs"
   },
   "homepage.resource.resDocs.desc": {
     "message": "Use the Research Portal, request data access, and more"
@@ -347,7 +347,7 @@
     "message": "Documents for Researchers"
   },
   "homepage.resource.resRes.link": {
-    "message": "/chercheur/ressources"
+    "message": "/researcher/resources"
   },
   "homepage.resource.resRes.desc": {
     "message": "Consent templates, PCGL frameworks, and more"
@@ -365,7 +365,7 @@
     "message": "Training for Researchers"
   },
   "homepage.resource.resCat.link": {
-    "message": "/chercheur/catalog"
+    "message": "/researcher/catalog"
   },
   "homepage.resource.resCat.desc": {
     "message": "Learn about genomics analyses, data governance, and more"
