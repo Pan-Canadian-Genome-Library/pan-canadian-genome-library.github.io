@@ -9,24 +9,24 @@ This content is still in development. Please check in the future for updates.
 The PCGL Training Team catalogs training resources that may benefit users of the PCGL. Check out the Researcher Training Catalog below:
 
 export const myCategoryColors = {
-  'Equity, Diversity, and Inclusion': '#DDC3D1',
-  'Ethical Research Conduct': '#EAEDF1',
-  'Data Governance': '#F4C8bF',
-  'Data Management': '#96CAE9',
-  'Informatics': '#ABF7E8',
-  'Data Processing & Analysis': '#60AADB',
-  'Professional Development': '#BABABA',
-  'PCGL-specific': '#F48287',
+  "Equity, Diversity, and Inclusion": { light: '#DDC3D1', dark: '#843961'},
+  "Ethical Research Conduct": { light: '#EAEDF1', dark: '#425059'},
+  "Data Governance": { light: '#F4C8bF', dark: '#99341F'},
+  'Data Management': {light: '#96CAE9', dark: '#005C66'},
+  'Informatics': {light: '#ABF7E8', dark: '#0D5649'},
+  'Data Processing & Analysis': { light: '#60AADB', dark: '#054A74'},
+  'Statistics': { light: '#BABABA', dark: '#434343'},
+  'PCGL-specific': { light: '#F48287', dark: '#A61419'},
 }
 
 
 export const resources = [
     {
-        name: 'The Fundamentals of OCAP',
+        name: 'The Fundamentals of OCAP®',
         source: 'First Nations Information Governance Centre',
         link: 'https://fnigc.ca/ocap-training/',
         categories: ['Ethical Research Conduct', 'Data Governance', 'Equity, Diversity, and Inclusion'],
-        audience: 'Researchers whose projects involve interacting with First Nations data',
+        audience: 'Researchers whose projects involve interacting with First Nations data. OCAP® is a registered trademark of the First Nations Information Governance Centre (FNIGC)',
         description: '',
         mode: 'On-demand course',
         time: '4-6 hours',
@@ -45,6 +45,54 @@ export const resources = [
         languages: ['English', 'French'],
         cost: 'Free',
     },
+        {
+        name: 'Unconscious Bias Education Modules',
+        source: 'Toronto Initiative for Diversity and Excellence',
+        link: 'https://www.toronto-tide.ca/education/',
+        categories: ['Equity, Diversity, and Inclusion'],
+        audience: 'Researchers seeking to learn about unconscious bias',
+        description: '',
+        mode: ['On-demand course'],
+        time: '2 hours',
+        languages: ['English'],
+        cost: 'Free',
+    },
+        {
+        name: 'Patient Oriented Resources Repository',
+        source: 'Passerelle',
+        link: 'https://passerelle-nte.ca/en/resources/',
+        categories: ['Ethical Research Conduct', 'Equity, Diversity, and Inclusion'],
+        audience: 'Research team members who will do patient engagement in research',
+        description: '',
+        mode: ['Repository of guides, documents, and toolkits'],
+        time: 'Varies by learner',
+        languages: ['English', 'French'],
+        cost: 'Free',
+    },
+        {
+        "name": "Reproducible Research: Essentials for Managing Your Data 2026",
+        source: 'Canadian Bioinformatics Workshops & Pan-Canadian Genome Library',
+        link: 'https://bioinformaticsdotca.github.io/RDM_To-2605/',
+        categories: ['Data Management'],
+        audience: 'Researchers seeking to apply data management practices',
+        description: '',
+        mode: ['Open access training materials'],
+        time: '4-6 hours',
+        languages: ['English'],
+        cost: 'Free',
+    },
+        {
+        name: 'FNHSSM Data Sovereignty Webinar Series # 3 - OCAP® & Ethical Principles',
+        source: 'First Nations Health and Social Secretariat of Manitoba',
+        link: 'https://www.youtube.com/playlist?list=PLrjSBl20H7tc3WQ0iQ9WDcTrH9qIN_uBp',
+        categories: ['Data Governance', 'Equity, Diversity, and Inclusion', 'Ethical Research Conduct'],
+        audience: 'Researchers whose projects involve interacting with First Nations data. OCAP® is a registered trademark of the First Nations Information Governance Centre (FNIGC)',
+        description: '',
+        mode: ['Recorded webinar'],
+        time: '1 hour',
+        languages: ['English'],
+        cost: 'Free',
+    },
 ];
 
 ## Data Governance Resources
@@ -54,6 +102,47 @@ export const resources = [
     filterTag='Data Governance'
 />
 
+## Data Management Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Data Management'
+/>
+
+## Data Processing & Analysis Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Data Processing & Analysis'
+/>
+
+## Equity, Diversity, and Inclusion Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Equity, Diversity, and Inclusion'
+/>
+
+## Ethical Research Conduct Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Ethical Research Conduct'
+/>
+
+## Informatics Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Informatics'
+/>
+
+## Statistics Resources
+<ResourceGallery 
+    data={resources} 
+    categoryColors={myCategoryColors}
+    filterTag='Statistics'
+/>
 
 ## All Resources
 <ResourceGallery 
