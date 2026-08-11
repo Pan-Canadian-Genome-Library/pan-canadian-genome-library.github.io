@@ -143,7 +143,7 @@
 /* Active State - High-visibility Pill */
 .table-of-contents__link--active {
   color: var(--ifm-color-primary) !important;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 1;
   background-color: var(--ifm-sidebar-colour);
   padding-left: 12px;
