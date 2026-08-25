@@ -6,5 +6,13 @@
   "sidebar.docsSidebar.category.PCGL Guides": {
     "message": "PCGL Guides",
     "description": "The label for category 'PCGL Guides' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Guides for Using the PCGL": {
+    "message": "Guides for Using the PCGL",
+    "description": "The label for category 'Guides for Using the PCGL' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Documents de la BGPC": {
+    "message": "Documents de la BGPC",
+    "description": "The label for category 'Documents de la BGPC' in sidebar 'docsSidebar'"
   }
 }

@@ -19,12 +19,12 @@ interface Category {
 
 const categories: Record<string, Category> = {
     docs: {
-        title: translate({ message: "PCGL Guides", id: "homepage.categories.docs.title" }),
-        description: translate({ message: "Resources for using the PCGL", id: "homepage.categories.docs.desc" }), 
+        title: translate({ message: "PCGL Guides & Documents", id: "homepage.categories.docs.title" }),
+        description: translate({ message: "Resources for using the PCGL, including step-by-step guides and other documents", id: "homepage.categories.docs.desc" }), 
     },
     catalogs: {
-        title: translate({ message: "Training Catalog", id: "homepage.categories.catalogs.title" }),
-        description: translate({ message: "Training for PCGL users", id: "homepage.categories.catalogs.desc" }), 
+        title: translate({ message: "Training Catalogs", id: "homepage.categories.catalogs.title" }),
+        description: translate({ message: "Curated collections of training resources for PCGL users", id: "homepage.categories.catalogs.desc" }), 
     },
 };
 

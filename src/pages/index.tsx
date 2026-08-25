@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageAudiences from '@site/src/components/HomepageAudiences';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate'; 
 
 import styles from './index.module.css';
 
@@ -16,10 +17,14 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h2" className="hero__title">
-          {siteConfig.title}
+          <Translate id="homepage.hero.title" description="The homepage hero title">
+            Pan-Canadian Genome Library
+          </Translate>
         </Heading>
         <Heading as="h1" className="hero__subtitle">
-          {siteConfig.tagline}
+          <Translate id="homepage.hero.tagline" description="The homepage hero tagline">
+            Training & Documentation
+          </Translate>
         </Heading>
       </div>
     </header>
@@ -78,11 +83,15 @@ export default function Home(): ReactNode {
         <div className={styles.container}>
           <div className={styles.resourcesSection}> 
             <Heading as="h1">
-              Resources for PCGL users
+              <Translate id="homepage.title.heading" description="The homepage title heading">
+                Resources for PCGL users
+              </Translate>
             </Heading>
             <p>
-              This Training & Documentation site is the home of resources for all users of the PCGL, including researchers, participants, and the public. 
-              These resources include step-by-step guides for using the PCGL, curated catalogs of external training resources, and more!
+              <Translate id="homepage.desc.text" description="The homepage text description">
+                This Training & Documentation site is the home of resources for all users of the PCGL, including researchers, participants, and the public. 
+                These resources include step-by-step guides for using the PCGL, curated catalogs of external training resources, and more!
+              </Translate>
             </p>
           </div>
         </div>

@@ -323,64 +323,80 @@
     "description": "The title of the tag list page"
   },
   "homepage.categories.docs.title": {
-    "message": "PCGL Guides"
+    "message": "Guides et documents de la BGPC"
   },
   "homepage.categories.docs.desc": {
-    "message": "Resources for using the PCGL"
+    "message": "Ressources pour utiliser la BGPC, y compris des guides pratiques étape par étape et d'autres documents"
   },
   "homepage.categories.catalogs.title": {
-    "message": "Training Catalog"
+    "message": "Ressources de formation"
   },
   "homepage.categories.catalogs.desc": {
-    "message": "Training for PCGL users"
+    "message": "Sélection de ressources de formation pour les membres utilisateurs de la BGPC."
   },
   "homepage.resource.resDocs.title": {
-    "message": "Guides for Researchers"
+    "message": "Guides pour la recherche"
   },
   "homepage.resource.resDocs.link": {
     "message": "/researcher/docs"
   },
   "homepage.resource.resDocs.desc": {
-    "message": "Use the Research Portal, request data access, and more"
+    "message": "Utilisez le portail de recherche, demandez l'accès aux données, et plus encore"
   },
   "homepage.resource.resRes.title": {
-    "message": "Documents for Researchers"
+    "message": "Documents pour la recherche"
   },
   "homepage.resource.resRes.link": {
     "message": "/researcher/resources"
   },
   "homepage.resource.resRes.desc": {
-    "message": "Consent templates, PCGL frameworks, and more"
+    "message": "Cadres de référence de la BGPC, modèles de consentement et plus encore"
   },
   "homepage.resource.pubDocs.title": {
-    "message": "Guides for Participants & Public"
+    "message": "Guides pour les personnes participantes et le public"
   },
   "homepage.resource.pubDocs.link": {
     "message": "/participant-public/docs"
   },
   "homepage.resource.pubDocs.desc": {
-    "message": "Will be available with future versions of the PCGL"
+    "message": "Cette section sera offerte dans une prochaine version de la BGPC"
   },
   "homepage.resource.resCat.title": {
-    "message": "Training for Researchers"
+    "message": "Formation pour la recherche"
   },
   "homepage.resource.resCat.link": {
     "message": "/researcher/catalog"
   },
   "homepage.resource.resCat.desc": {
-    "message": "Learn about genomics analyses, data governance, and more"
+    "message": "Découvrez les analyses génomiques, la gouvernance des données et bien plus encore"
   },
   "homepage.resource.pubCat.title": {
-    "message": "Training for Participants and the Public"
+    "message": "Formation pour les personnes participantes et le public"
   },
   "homepage.resource.pubCat.link": {
     "message": "/participant-public/catalog"
   },
   "homepage.resource.pubCat.desc": {
-    "message": "Learn about genomics and personalized healthcare"
+    "message": "Découvrez la génomique et les soins de santé personnalisés"
   },
   "theme.IconExternalLink.ariaLabel": {
     "message": "(opens in new tab)",
     "description": "The ARIA label for the external link icon"
+  },
+  "homepage.title.heading": {
+    "message": "Ressources pour la communauté d'utilisateurs de la BGPC",
+    "description": "The homepage title heading"
+  },
+  "homepage.desc.text": {
+    "message": "Ce site de formation et de documentation regroupe les ressources destinées à la communauté de la BGPC, notamment à la communauté de recherche, les personnes participantes et au public. Vous y trouverez ici les guides détaillés sur l'utilisation de la BGPC, des catalogues de ressources de formation externes et plus !",
+    "description": "The homepage text description"
+  },
+  "homepage.hero.title": {
+    "message": "Bibliothèque génomique pancanadienne",
+    "description": "The homepage hero title"
+  },
+  "homepage.hero.tagline": {
+    "message": "Formation et documentation",
+    "description": "The homepage hero tagline"
   }
 }
