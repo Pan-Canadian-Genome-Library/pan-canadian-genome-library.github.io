@@ -12,6 +12,7 @@ interface Resource {
   cost?: string; // Optional if not all resources have it
   languages: string | string[];
   categories?: string[];
+  difficulty?: 'Beginner' | 'Intermediate' | 'Advanced' | string;
 }
 
 type ColorThemeSetting = string | { light: string; dark: string };
@@ -98,6 +99,13 @@ export default function ResourceGallery({ data = [], categoryColors = {}, filter
             </div>
 
             {/* Info Rows */}
+            {item.difficulty && (
+              <div className={styles.infoRow}>
+                <i className={`pi pi-info-circle ${styles.piIcon}`}></i>
+                <span>{item.difficulty}</span>
+              </div>
+            )}
+
             <div className={styles.infoRow}>
               <i className={`pi pi-users ${styles.piIcon}`}></i>
               <span>{item.audience}</span>
