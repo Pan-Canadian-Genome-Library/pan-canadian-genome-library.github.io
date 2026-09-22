@@ -353,13 +353,13 @@
     "message": "Cadres de référence de la BGPC, modèles de consentement et plus encore"
   },
   "homepage.resource.pubDocs.title": {
-    "message": "Guides pour les personnes participantes et le public"
+    "message": "Documents pour les personnes participantes et le public"
   },
   "homepage.resource.pubDocs.link": {
-    "message": "/participant-public/docs"
+    "message": "/participant-public/resources"
   },
   "homepage.resource.pubDocs.desc": {
-    "message": "Cette section sera offerte dans une prochaine version de la BGPC"
+    "message": "FAQ sur la recherche génomique et d'autres ressources à venir"
   },
   "homepage.resource.resCat.title": {
     "message": "Formation pour la recherche"

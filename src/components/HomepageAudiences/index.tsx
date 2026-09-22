@@ -42,9 +42,9 @@ const resources: Resource[] = [
         category: "docs",
     },
     {
-        title: translate({ message: "Guides for Participants & Public", id: "homepage.resource.pubDocs.title" }),
-        link: translate({ message: "/participant-public/docs", id: "homepage.resource.pubDocs.link" }),
-        description: translate({ message: "Will be available with future versions of the PCGL", id: "homepage.resource.pubDocs.desc" }),
+        title: translate({ message: "Documents for Participants & Public", id: "homepage.resource.pubDocs.title" }),
+        link: translate({ message: "/participant-public/resources", id: "homepage.resource.pubDocs.link" }),
+        description: translate({ message: "Genomic research FAQs, and more resources coming soon", id: "homepage.resource.pubDocs.desc" }),
         category: "docs",
     },
     {
